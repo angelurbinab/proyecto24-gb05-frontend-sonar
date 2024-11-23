@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
+import HomePage from './pages/HomePage';
 import './App.css';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Routes>
           <Route path="/login" element={<LoginPage onLogin={handleLogin} />} />
           <Route path="/register" element={<RegisterPage onRegister={handleRegister} />} />
+          <Route path="/" element={isLoggedIn ? <HomePage /> : <Navigate to="/login" />} />
         </Routes>
       </div>
     </Router>
