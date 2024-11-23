@@ -1,0 +1,112 @@
+/* src/pages/ContenidoPage.css */
+.contenido-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #101221;
+    color: #f6be00;
+    min-height: 100vh;
+    justify-content: space-between;
+  }
+
+  .banner {
+    width: 100%;
+    max-height: 200px;
+  }
+
+  .contenido-detalles {
+    text-align: center;
+    margin: 20px;
+  }
+
+  .thumbnail {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .reproducir-button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f6be00;
+    color: #14141c;
+    cursor: pointer;
+  }
+
+  .reproducir-button:hover {
+    background-color: #e0a800;
+  }
+
+  .favorito-button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f6be00;
+    color: #14141c;
+    cursor: pointer;
+  }
+
+  .favorito-button:hover {
+    background-color: #e0a800;
+  }
+
+  .calificaciones {
+    width: 80%;
+    margin: 20px;
+  }
+
+  .calificacion-card {
+    background-color: #101221;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+  }
+
+  .calificacion-form {
+    background-color: #101221;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .calificacion-form h3 {
+    margin-bottom: 20px;
+  }
+
+  .calificacion-form label {
+    display: block;
+    margin: 10px 0 5px;
+    text-align: left;
+  }
+
+  .calificacion-form input,
+  .calificacion-form textarea {
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 20px;
+    border: 1px solid #f6be00;
+    border-radius: 5px;
+    background-color: #14141c;
+    color: #f6be00;
+  }
+
+  .calificar-button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f6be00;
+    color: #14141c;
+    cursor: pointer;
+  }
+
+  .calificar-button:hover {
+    background-color: #e0a800;
+  }
