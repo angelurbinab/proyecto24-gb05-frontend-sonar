@@ -176,3 +176,19 @@ export const obtenerCalificacionesPorContenido = async (id) => {
         console.error("Error al obtener las calificaciones del contenido:", error);
     }
 };
+
+// Añadir perfil de usuario (POST method)
+export const agregarPerfilUsuario = async (id, perfilData) => {
+    try {
+        const response = await fetch(`${API_URLS.usuarios}/perfiles`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(perfilData)
+        });
+        return await handleResponse(response);
+    } catch (error) {
+        console.error("Error al añadir el perfil de usuario:", error);
+    }
+};
