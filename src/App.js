@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import HomePage from './pages/HomePage';
+import ContenidoPage from './pages/ContenidoPage';
 import './App.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Routes>
           <Route path="/login" element={<LoginPage onLogin={handleLogin} />} />
           <Route path="/register" element={<RegisterPage onRegister={handleRegister} />} />
+            <Route path="/contenido/:id" element={isLoggedIn ? <ContenidoPage /> : <Navigate to="/login" />} />
           <Route path="/" element={isLoggedIn ? <HomePage /> : <Navigate to="/login" />} />
         </Routes>
       </div>
@@ -30,3 +32,5 @@ function App() {
 }
 
 export default App;
+
+
