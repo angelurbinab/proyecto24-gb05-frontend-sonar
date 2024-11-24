@@ -111,3 +111,22 @@ export const obtenerContenidos = async (genero = '', orden = '') => {
         console.error("Error al obtener los contenidos:", error);
     }
 };
+
+// Calificar contenido (POST method)
+export const calificarContenido = async (calificacionData) => {
+    try {
+        const response = await fetch(`${API_URLS.calificaciones}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(calificacionData)
+        });
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return await handleResponse(response);
+    } catch (error) {
+        console.error("Error al calificar el contenido:", error);
+    }
+};
