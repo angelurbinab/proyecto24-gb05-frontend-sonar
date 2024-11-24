@@ -161,3 +161,18 @@ export const eliminarUsuario = async () => {
         console.error("Error al eliminar el usuario:", error);
     }
 };
+
+// Obtener calificaciones de un contenido (GET method)
+export const obtenerCalificacionesPorContenido = async (id) => {
+    try {
+        const response = await fetch(`${API_URLS.calificaciones}/${id}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        return await handleResponse(response);
+    } catch (error) {
+        console.error("Error al obtener las calificaciones del contenido:", error);
+    }
+};
