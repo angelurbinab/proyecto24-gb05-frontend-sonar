@@ -207,3 +207,22 @@ export const cambiarPerfilUsuario = async (nombrePerfil) => {
         console.error("Error al cambiar el perfil de usuario:", error);
     }
 };
+
+// Añadir contenido a favoritos (POST method)
+export const añadirFavorito = async (favoritoData) => {
+    try {
+        const response = await fetch(`${API_URLS.usuarios}/favoritos`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(favoritoData)
+        });
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return await handleResponse(response);
+    } catch (error) {
+        console.error("Error al añadir a favoritos:", error);
+    }
+};
