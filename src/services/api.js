@@ -226,3 +226,18 @@ export const añadirFavorito = async (favoritoData) => {
         console.error("Error al añadir a favoritos:", error);
     }
 };
+
+// Obtener favoritos del usuario (GET method)
+export const obtenerFavoritos = async () => {
+    try {
+        const response = await fetch(`${API_URLS.usuarios}/favoritos`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        return await handleResponse(response);
+    } catch (error) {
+        console.error("Error al obtener los favoritos:", error);
+    }
+};
