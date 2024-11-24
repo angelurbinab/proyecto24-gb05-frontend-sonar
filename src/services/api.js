@@ -130,3 +130,18 @@ export const calificarContenido = async (calificacionData) => {
         console.error("Error al calificar el contenido:", error);
     }
 };
+
+// Eliminar usuario (DELETE method)
+export const eliminarUsuario = async () => {
+    try {
+        const response = await fetch(`${API_URLS.usuarios}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        return await handleResponse(response);
+    } catch (error) {
+        console.error("Error al eliminar el usuario:", error);
+    }
+};
