@@ -192,3 +192,18 @@ export const agregarPerfilUsuario = async (id, perfilData) => {
         console.error("Error al añadir el perfil de usuario:", error);
     }
 };
+
+// Obtener favoritos del usuario (GET method)
+export const obtenerFavoritos = async () => {
+    try {
+        const response = await fetch(`${API_URLS.usuarios}/favoritos`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        return await handleResponse(response);
+    } catch (error) {
+        console.error("Error al obtener los favoritos:", error);
+    }
+};
