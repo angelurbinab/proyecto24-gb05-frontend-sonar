@@ -4,6 +4,7 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import HomePage from './pages/HomePage';
 import ContenidoPage from './pages/ContenidoPage';
+import PerfilPage from './pages/PerfilPage';
 import './App.css';
 
 function App() {
@@ -24,7 +25,8 @@ function App() {
           <Route path="/login" element={<LoginPage onLogin={handleLogin} />} />
           <Route path="/register" element={<RegisterPage onRegister={handleRegister} />} />
             <Route path="/contenido/:id" element={isLoggedIn ? <ContenidoPage /> : <Navigate to="/login" />} />
-          <Route path="/" element={isLoggedIn ? <HomePage /> : <Navigate to="/login" />} />
+          <Route path="/perfil" element={isLoggedIn ? <PerfilPage /> : <Navigate to="/login" />} />
+            <Route path="/" element={isLoggedIn ? <HomePage /> : <Navigate to="/login" />} />
         </Routes>
       </div>
     </Router>
@@ -32,5 +34,7 @@ function App() {
 }
 
 export default App;
+
+
 
 
