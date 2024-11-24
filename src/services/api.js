@@ -192,3 +192,18 @@ export const agregarPerfilUsuario = async (id, perfilData) => {
         console.error("Error al añadir el perfil de usuario:", error);
     }
 };
+
+// Cambiar perfil de usuario (PUT method)
+export const cambiarPerfilUsuario = async (nombrePerfil) => {
+    try {
+        const response = await fetch(`${API_URLS.usuarios}/perfiles?nombrePerfil=${nombrePerfil}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        return await handleResponse(response);
+    } catch (error) {
+        console.error("Error al cambiar el perfil de usuario:", error);
+    }
+};
