@@ -193,6 +193,40 @@ export const agregarPerfilUsuario = async (id, perfilData) => {
     }
 };
 
+// Cambiar perfil de usuario (PUT method)
+export const cambiarPerfilUsuario = async (nombrePerfil) => {
+    try {
+        const response = await fetch(`${API_URLS.usuarios}/perfiles?nombrePerfil=${nombrePerfil}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        return await handleResponse(response);
+    } catch (error) {
+        console.error("Error al cambiar el perfil de usuario:", error);
+    }
+};
+
+// Añadir contenido a favoritos (POST method)
+export const añadirFavorito = async (favoritoData) => {
+    try {
+        const response = await fetch(`${API_URLS.usuarios}/favoritos`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(favoritoData)
+        });
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return await handleResponse(response);
+    } catch (error) {
+        console.error("Error al añadir a favoritos:", error);
+    }
+};
+
 // Obtener favoritos del usuario (GET method)
 export const obtenerFavoritos = async () => {
     try {
