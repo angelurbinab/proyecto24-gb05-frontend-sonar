@@ -130,3 +130,19 @@ export const calificarContenido = async (calificacionData) => {
         console.error("Error al calificar el contenido:", error);
     }
 };
+
+// Modificar usuario (PUT method)
+export const modificarUsuario = async (id, usuarioData) => {
+    try {
+        const response = await fetch(`${API_URLS.usuarios}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(usuarioData)
+        });
+        return await handleResponse(response);
+    } catch (error) {
+        console.error("Error al modificar el usuario:", error);
+    }
+};
