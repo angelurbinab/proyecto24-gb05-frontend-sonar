@@ -85,7 +85,7 @@ const PerfilPage = () => {
         <h2>Perfil</h2>
         {error && <p className="error-message">{error}</p>}
         <div>
-          <label>Nombre:</label>
+          <label htmlFor="nombreUsuario">Nombre:</label>
           <input
             type="text"
             value={nombreUsuario}
@@ -93,7 +93,7 @@ const PerfilPage = () => {
           />
         </div>
         <div>
-          <label>Apellido:</label>
+          <label htmlFor="apellido">Apellido:</label>
           <input
             type="text"
             value={apellido}
@@ -101,7 +101,7 @@ const PerfilPage = () => {
           />
         </div>
         <div>
-          <label>Correo Electrónico:</label>
+          <label htmlFor="correoElectronico">Correo Electrónico:</label>
           <input
             type="email"
             value={correoElectronico}
@@ -109,7 +109,7 @@ const PerfilPage = () => {
           />
         </div>
         <div>
-          <label>Contraseña:</label>
+          <label htmlFor="contrasena">Contraseña:</label>
           <input
             type="password"
             value={contrasena}
@@ -122,7 +122,7 @@ const PerfilPage = () => {
       <form onSubmit={handleAgregarMetodoPago} className="metodo-pago-form">
         <h2>Añadir Método de Pago</h2>
         <div>
-          <label>Tipo de Tarjeta:</label>
+          <label htmlFor="tipoTarjeta">Tipo de Tarjeta:</label>
           <select value={tipoTarjeta} onChange={(e) => setTipoTarjeta(e.target.value)}>
             <option value="...">Elegir tipo de tarjeta</option>
             <option value="Visa">Visa</option>
@@ -132,7 +132,7 @@ const PerfilPage = () => {
           </select>
         </div>
         <div>
-          <label>Número de Tarjeta:</label>
+          <label htmlFor="numeroTarjeta">Número de Tarjeta:</label>
           <input
             type="text"
             value={numeroTarjeta}
@@ -140,7 +140,7 @@ const PerfilPage = () => {
           />
         </div>
         <div>
-          <label>Fecha de Expiración:</label>
+          <label htmlFor="fechaExpiracion">Fecha de Expiración:</label>
           <input
             type="date"
             value={fechaExpiracion}
@@ -148,7 +148,7 @@ const PerfilPage = () => {
           />
         </div>
         <div>
-          <label>CVV:</label>
+          <label htmlFor="cvv">CVV:</label>
           <input
             type="text"
             value={cvv}
