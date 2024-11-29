@@ -105,7 +105,7 @@ const ContenidoPage = () => {
       <form onSubmit={handleCalificar} className="calificacion-form">
         <h3>Dejar una calificación</h3>
         <div>
-          <label>Puntuación:</label>
+          <label htmlFor="puntuacion">Puntuación:</label>
           <input
             type="number"
             value={puntuacion}
@@ -116,7 +116,7 @@ const ContenidoPage = () => {
           />
         </div>
         <div>
-          <label>Comentario:</label>
+          <label htmlFor="comentario">Comentario:</label>
           <textarea
             value={comentario}
             onChange={(e) => setComentario(e.target.value)}

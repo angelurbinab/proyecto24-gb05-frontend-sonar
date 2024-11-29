@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Register from '../components/Register';
 
 const RegisterPage = ({ onRegister }) => {
@@ -7,6 +8,10 @@ const RegisterPage = ({ onRegister }) => {
       <Register onRegister={onRegister} />
     </div>
   );
+};
+
+RegisterPage.propTypes = {
+  onRegister: PropTypes.func.isRequired,
 };
 
 export default RegisterPage;

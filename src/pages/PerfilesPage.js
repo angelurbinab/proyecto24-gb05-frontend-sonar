@@ -73,7 +73,7 @@ const PerfilesPage = () => {
       <form onSubmit={handleAgregarPerfil} className="perfil-form">
         <h2>Añadir Nuevo Perfil</h2>
         <div>
-          <label>Nombre del Perfil:</label>
+          <label htmlFor="nombrePerfil">Nombre del Perfil:</label>
           <input
             type="text"
             value={nombrePerfil}
